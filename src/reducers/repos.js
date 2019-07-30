@@ -3,11 +3,12 @@ import {GET_REPOS} from '../actions/types';
 const initialState = [];
 
 export default function(state = initialState, action) {
-	switch (action.type) {
+	const {type, payload} = action;
+	switch (type) {
 		case GET_REPOS:
 			return {
 				...state,
-				repos: action.payload
+				...payload
 			};
 		default:
 			return state;
