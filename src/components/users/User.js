@@ -4,6 +4,7 @@ import {getUser, getUserRepos} from '../../actions/users';
 import {Link} from 'react-router-dom';
 import {FaCheckCircle} from 'react-icons/fa';
 import {FaTimesCircle} from 'react-icons/fa';
+import Repos from '../repos/Repos';
 
 const User = props => {
 	useEffect(() => {
@@ -95,14 +96,14 @@ const User = props => {
 					Public Gists: {public_gists}
 				</div>
 			</div>
+			<Repos />
 		</div>
 	);
 };
 
 const mapStateToProps = state => {
 	return {
-		user: state.user,
-		repos: state.repos
+		user: state.user
 	};
 };
 
