@@ -3,8 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## How to use this Repo
 In order to use this repository, you need to get client-id and client-secret from github API. After that create a .env.local file in the root of your project.
 
-REACT_APP_GITHUB_CLIENT_ID= 'YOUR CLIENT ID'
-REACT_APP_GITHUB_CLIENT_SECRET= 'YOUR CLIENT SECRET'
+REACT_APP_GITHUB_CLIENT_ID= 'YOUR CLIENT ID'<br>
+REACT_APP_GITHUB_CLIENT_SECRET= 'YOUR CLIENT SECRET'<br>
 
 And you're all set.
 
