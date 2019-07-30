@@ -4,7 +4,7 @@ import {searchUsers, clearUsers} from '../../actions/users';
 import {setAlert} from '../../actions/alert';
 import {connect} from 'react-redux';
 
-const Search = ({searchUsers, setAlert, clearUsers}) => {
+const Search = ({searchUsers, setAlert, clearUsers, users}) => {
 	const [text, setText] = useState('');
 
 	const handleOnChange = e => {
@@ -39,21 +39,22 @@ const Search = ({searchUsers, setAlert, clearUsers}) => {
 						className="btn btn-dark btn-block"
 					/>
 				</form>
-				{}
-				<button
-					className="btn btn-light btn-block"
-					onClick={() => clearUsers()}
-				>
-					Clear
-				</button>
+				{users.length > 0 &&
+					<button
+						className="btn btn-light btn-block my-3"
+						onClick={() => clearUsers()}
+					>
+						Clear
+					</button>}
 			</div>
 		</div>
 	);
 };
 
-// Search.propTypes = {
-// 	searchUsers: PropTypes.func.isRequired,
-// 	setAlert: PropTypes.func.isRequired
-// };
+const mapStateToProps = state => {
+	return {users: Object.values(state.users)};
+};
 
-export default connect(null, {searchUsers, setAlert, clearUsers})(Search);
+export default connect(mapStateToProps, {searchUsers, setAlert, clearUsers})(
+	Search
+);

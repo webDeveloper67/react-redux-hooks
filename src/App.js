@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar';
 import Search from './components/users/Search';
 import Alert from './components/layout/Alert';
 import Users from './components/users/Users';
+import User from './components/users/User';
 
 // Redux
 import {Provider} from 'react-redux';
@@ -29,6 +30,7 @@ class App extends Component {
 											<Users />
 										</Fragment>}
 								/>
+								<Route path="/user/:login" component={User} />
 							</Switch>
 						</div>
 					</div>
