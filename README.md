@@ -1,7 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to use this Repo
-In order to use this repository, you need to get client-id and client-secret from github API and then create a .env.local file in the root of your project.
+In order to use this repository, you need to get client-id and client-secret from github API. After that create a .env.local file in the root of your project.
+
+REACT_APP_GITHUB_CLIENT_ID= 'YOUR CLIENT ID'
+REACT_APP_GITHUB_CLIENT_SECRET= 'YOUR CLIENT SECRET'
+
+And you're all set.
 
 ## Available Scripts
 
